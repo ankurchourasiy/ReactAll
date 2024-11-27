@@ -1,6 +1,6 @@
 import React from "react";
 
-const Page = ({id,title, ChannelName = "coder dost", Views, Subs,verify,handleDelete }) => {
+const Page = ({id,title, ChannelName = "coder dost", Views, Subs,verify,handleDelete,handleEdit}) => {
   
   return (
     <div>
@@ -11,6 +11,7 @@ const Page = ({id,title, ChannelName = "coder dost", Views, Subs,verify,handleDe
        <p>{Subs}</p> 
        </> }
        <button onClick={()=>handleDelete({id})}>Delete</button>
+       <button onClick={()=>handleEdit({id})}>Edit</button>
     </div>
   );
 };

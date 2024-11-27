@@ -11,9 +11,7 @@ function App() {
 
   const [object,setObject]=useState(obj);
   // const [title,setTitle]=useState("");
-  const handleAdd=()=>{
-
-    
+  const handleAdd=()=>{ 
     setObject([...object,{
       id:object.length+1,
       title:'dsjbfs',
@@ -26,6 +24,12 @@ function App() {
   }
    const handleDelete=({id})=>{
       setObject(object.filter(object=>object.id!==id))
+   }
+   const handleEdit=({id})=>{
+    console.log('edit!',id);
+    setObject(object.find(object=>object.id==id){
+       
+    })
    }
   // const handleChange=(e)=>{
   //   setTitle(e.target.value);
@@ -56,10 +60,12 @@ function App() {
             Subs= {object.Subs}
             verify={object.verify}
             handleDelete={handleDelete}
+            handleEdit={handleEdit}
             ></Page>
       ))
     }
      <button onClick={()=>handleAdd()}>Add!</button>
+ 
     {/* <Button>Play!</Button>
 
     <CounterApplication/> */}

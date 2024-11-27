@@ -16,7 +16,7 @@ const Form = ({setObject,object}) => {
             Subs: "2M",
             verify:true
     }])
-    setTitle("");
+    setTitle(" ");
   }
   return (
     <div>
